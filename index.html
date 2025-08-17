@@ -1,61 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Leaderboard</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baintmail - Connect Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+            type="application/javascript"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>🤖 AI Leaderboard</h1>
-    <p>Track the top-performing AI models in real-time.</p>
-  </header>
-
-  <main>
-    <section class="leaderboard">
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Model</th>
-            <th>Score</th>
-            <th>Provider</th>
-          </tr>
-        </thead>
-        <tbody id="leaderboard-data">
-          <!-- This will be filled dynamically -->
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer>
-    <p>Powered by Lêbel Bros AI 🧠</p>
-  </footer>
-
-  <script>
-    // Sample static data (replace later with real API)
-    const models = [
-      { rank: 1, name: "GPT-4o", score: 97.2, provider: "OpenAI" },
-      { rank: 2, name: "Claude 3 Opus", score: 95.4, provider: "Anthropic" },
-      { rank: 3, name: "Gemini 1.5", score: 93.8, provider: "Google" },
-      { rank: 4, name: "Command R+", score: 91.7, provider: "Cohere" },
-      { rank: 5, name: "Mistral 7B", score: 88.9, provider: "Mistral AI" }
-    ];
-
-    const tableBody = document.getElementById("leaderboard-data");
-
-    models.forEach(model => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${model.rank}</td>
-        <td>${model.name}</td>
-        <td>${model.score}</td>
-        <td>${model.provider}</td>
-      `;
-      tableBody.appendChild(row);
-    });
-  </script>
+    <div class="container">
+        <h1>Baintmail</h1>
+        <p>The future of decentralized communication.</p>
+        <button id="connectButton">Connect Wallet</button>
+        <p id="walletAddress"></p>
+    </div>
 </body>
 </html>
